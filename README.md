@@ -4,7 +4,7 @@
 
 ## Environment reqs
 
-To build/run site you need:
+To build/run the site you need:
 
 - [Hugo](https://gohugo.io)
 - [Node](https://nodejs.org/en/) and [Npm](https://www.npmjs.com/)
