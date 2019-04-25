@@ -4,6 +4,15 @@
 <!--[if gt IE 8]><!--><html lang="{{ .Site.Params.html_lang | default "en" }}"><!--<![endif]-->
   <head>
     <meta charset="utf-8" />
+
+    <script type="text/javascript">
+      if(!window.location.hostname.includes('digital-land.github.io') && !window.location.hostname.includes('localhost')) {
+        document.querySelectorAll("[href^='/']").forEach(function(element) {
+          element.setAttribute('href', 'https://' + window.location.hostname + '/digital-land.github.io/' + element.getAttribute('href'));
+        });
+      }
+    </script>
+
     <title>{{ block "page_title" . }}GOV.UK - The best place to find government services and information{{ end }}</title>
 
     <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="/stylesheets/govuk-template.css?0.24.0"/><!--<![endif]-->
@@ -141,7 +150,6 @@
     <div id="global-app-error" class="app-error hidden"></div>
 
     <script src="/javascripts/govuk-template.js?0.24.0"></script>
-    <script src="/js/absurls.js"></script>
 
     {{ block "body_end" . }}{{ end }}
 
